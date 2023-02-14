@@ -27,8 +27,10 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 12px;
+  letter-spacing: 1px;
   color: #5E5B52;
 	vertical-align: baseline;
+  line-height: 1.3;
 }
 
 /* HTML5 display-role reset for older browsers */

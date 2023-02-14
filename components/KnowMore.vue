@@ -16,17 +16,23 @@ const props = defineProps(['value', 'link'])
 <style lang="scss" scoped>
 
 .know-more {
+      
+  &:hover {
+    opacity: 0.7;
+  }
   
   &-box {
     display: flex;
     align-items: flex-end;
     color: black;
+    background-color: transparent;
   }
 
   &-arrow {
     width: 21px;
     height: 7px;
     margin-left: 7px;
+    background-color: transparent;
   }
 
 }
