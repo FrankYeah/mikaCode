@@ -122,7 +122,7 @@ const isShowShop = ref(false)
   &-logo-href {
     
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 
@@ -139,7 +139,7 @@ const isShowShop = ref(false)
   &-item-href {
     
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 
@@ -157,7 +157,7 @@ const isShowShop = ref(false)
     cursor: pointer;
     
     &:hover {
-      opacity: 0.8
+      opacity: 0.7;
     }
   }
 
@@ -168,7 +168,7 @@ const isShowShop = ref(false)
     cursor: pointer;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 
@@ -206,7 +206,7 @@ const isShowShop = ref(false)
   &-shop-href {
     
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
     
   }
@@ -224,7 +224,7 @@ const isShowShop = ref(false)
     cursor: pointer;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
 
@@ -232,7 +232,7 @@ const isShowShop = ref(false)
     cursor: pointer;
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
     
   }

@@ -6,26 +6,9 @@
           <nuxt-link to="/shop"
             class="footer-logo-href"
           >
-            <img class="footer-logo" src="@/assets/img/common/logo.png" alt="logo">
+            <img class="footer-logo" src="@/assets/img/common/logo-white.png" alt="logo">
           </nuxt-link>
           <div class="footer-row">
-            <div class="footer-column">
-              <nuxt-link to="/"
-                class="footer-link-href"
-              >
-                <div class="footer-link">關於謎卡</div>
-              </nuxt-link>
-              <nuxt-link to="/"
-                class="footer-link-href"
-              >
-                <div class="footer-link">課程</div>
-              </nuxt-link>
-              <nuxt-link to="/"
-                class="footer-link-href"
-              >
-                <div class="footer-link">聯繫我們</div>
-              </nuxt-link>
-            </div>
             <div class="footer-column">
               <nuxt-link to="/"
                 class="footer-link-href"
@@ -103,6 +86,7 @@
         <div class="footer-right">
           <div class="footer-right-row">
             <div class="footer-mail">mikaontheroad@outlook.com</div>
+            
             <a href="https://www.facebook.com/mikaontheroad" target="_blank">
               <img class="footer-social" src="@/assets/img/common/fb.png" alt="logo">
             </a>
@@ -112,14 +96,17 @@
           </div>
           <div class="footer-input-row">
             <div class="footer-input-box">
-              <el-input v-model="subscript" placeholder="輸入電子郵件訂閱電子報"></el-input>
+              <el-input v-model="subscript"
+                placeholder="輸入電子郵件訂閱電子報"
+                class="footer-input-element"
+              ></el-input>
             </div>
             <div class="footer-btn">訂閱</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-copyright">fff</div>
+    <div class="footer-copyright">Copyright © 2022 MikaonTheRoad. All rights reserved.</div>
   </div>
 </template>
 
@@ -129,16 +116,33 @@ const subscript = ref('1')
 
 </script>
 
+<style>
+
+.el-input__wrapper {
+  border: 0px;
+  border-radius: 0px;
+  height: 38px;
+}
+
+</style>
+
 <style lang="scss" scoped>
 
 .footer {
+  color: white;
 
   &-outer {
+    display: flex;
     background: #948C84;
   }
 
   &-inner {
-    
+    max-width: 1020px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 32px auto 54px;
   }
 
   &-left {
@@ -150,15 +154,23 @@ const subscript = ref('1')
   }
 
   &-logo {
+    margin-bottom: 19px;
     
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &-row {
-    
+    display: flex;
   }
 
   &-column {
-    
+    margin-right: 64px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 
   &-link-href {
@@ -166,11 +178,22 @@ const subscript = ref('1')
   }
 
   &-link {
+    margin-bottom: 12px;
+    color: white;
     
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &-link-inner {
-    
+    margin-bottom: 12px;
+    color: white;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &-right {
@@ -178,27 +201,46 @@ const subscript = ref('1')
   }
 
   &-right-row {
-    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 19px;
   }
 
   &-mail {
-    
+    color: white;
+    margin-right: 3px;
   }
 
   &-social {
-    
+    margin-left: 16px;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &-input-row {
-    
+    display: flex;
   }
 
   &-input-box {
     
   }
 
+  &-input-element {
+    width: 254px;
+    border-radius: 100%;
+  }
+
   &-btn {
-    
+    width: 86px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #5E5B52;
+    color: white;
   }
   
 
@@ -206,6 +248,7 @@ const subscript = ref('1')
     padding: 12px 0px;
     color: white;
     font-size: 10px;
+    text-align: center;
     background: #5E5B52;
   }
 

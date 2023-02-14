@@ -20,6 +20,7 @@
           </div>
           <div class="footer-brand-box">
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
+            <!-- <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
@@ -29,8 +30,7 @@
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
             <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo">
+            <img class="header-brand" src="@/assets/img/brand/brand1.png" alt="logo"> -->
           </div>
         </div>
       </div>
