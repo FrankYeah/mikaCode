@@ -3,7 +3,7 @@
     <div class="header-outer">
       <div class="header-desktop">
         <div class="header-center">
-          <nuxt-link to="/shop"
+          <nuxt-link to="/"
             class="header-logo-href"
           >
             <img class="header-logo" src="@/assets/img/common/logo.png" alt="logo">
