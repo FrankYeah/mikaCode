@@ -221,10 +221,19 @@ const isShowShop = ref(false)
   }
 
   &-lang-ch {
-    
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &-lang-en {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
     
   }
 

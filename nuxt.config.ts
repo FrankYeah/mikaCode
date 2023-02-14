@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     typescript: {
         typeCheck: true
     },
+    // css: [
+    //   'element-plus/dist/index.css'
+    // ],
     vite: {
       css: {
         preprocessorOptions: {
