@@ -51,7 +51,7 @@
                 </nuxt-link>
               </div>
             </div>
-            <nuxt-link to="/class"
+            <nuxt-link to="/course"
               class="header-item-href"
             >
               <div class="header-item">課程</div>
@@ -176,7 +176,7 @@ const isShowShop = ref(false)
   &-item-box {
     position: absolute;
     top: 24px;
-    width: 96px;
+    width: 98px;
     padding: 12px 60px 12px 12px;
     background: white;
     border-radius: 2px;

@@ -3,24 +3,24 @@
     <div class="footer-outer">
       <div class="footer-inner">
         <div class="footer-left">
-          <nuxt-link to="/shop"
+          <nuxt-link to="/"
             class="footer-logo-href"
           >
             <img class="footer-logo" src="@/assets/img/common/logo-white.png" alt="logo">
           </nuxt-link>
           <div class="footer-row">
             <div class="footer-column">
-              <nuxt-link to="/"
+              <nuxt-link to="/about"
                 class="footer-link-href"
               >
                 <div class="footer-link">關於謎卡</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/course"
                 class="footer-link-href"
               >
                 <div class="footer-link">課程</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/contact"
                 class="footer-link-href"
               >
                 <div class="footer-link">聯繫我們</div>
@@ -28,17 +28,17 @@
             </div>
 
             <div class="footer-column">
-              <nuxt-link to="/"
+              <nuxt-link to="/book"
                 class="footer-link-href"
               >
                 <div class="footer-link">作品集</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/book"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">出版書</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/paint"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">畫作</div>
@@ -46,17 +46,17 @@
             </div>
 
             <div class="footer-column">
-              <nuxt-link to="/"
+              <nuxt-link to="/shop"
                 class="footer-link-href"
               >
                 <div class="footer-link">商店</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/shop"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">畫作</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/shop"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">衣服</div>
@@ -64,17 +64,17 @@
             </div>
 
             <div class="footer-column">
-              <nuxt-link to="/"
+              <nuxt-link to="/article"
                 class="footer-link-href"
               >
                 <div class="footer-link">文章</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/article"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">媒體報導</div>
               </nuxt-link>
-              <nuxt-link to="/"
+              <nuxt-link to="/article"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">精選文章</div>

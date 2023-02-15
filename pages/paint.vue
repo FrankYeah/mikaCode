@@ -1,5 +1,7 @@
 <template>
-  <div class="about">
+  <div class="paint">
+    <HeadName :value="'聯絡我們'" />
+    
   </div>
 </template>
 
@@ -9,7 +11,7 @@
 
 <style lang="scss" scoped>
 
-.index {
+.paint {
 
 }
 
