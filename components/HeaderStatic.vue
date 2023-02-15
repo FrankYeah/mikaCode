@@ -105,6 +105,7 @@ const isShowShop = ref(false)
   padding: 12px 0px;
   background: #FFFFFF;
   box-shadow: 0px 0px 8px rgba(212, 207, 205, 0.5);
+  z-index: 1;
 
   &-outer {
     max-width: 1280px;

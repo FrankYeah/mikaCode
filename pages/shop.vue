@@ -1,8 +1,16 @@
 <template>
-  <div class="my-24 flex flex-col items-center">
+  <div class="about">
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 
 </script>
+
+<style lang="scss" scoped>
+
+.index {
+
+}
+
+</style>
