@@ -43,7 +43,7 @@ const formContent = ref('')
 
 function sendForm() {
   // formName.value++
-  alert('34d')
+  alert('send')
 }
 
 </script>

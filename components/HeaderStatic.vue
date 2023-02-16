@@ -15,28 +15,30 @@
               <div class="header-item">關於謎卡</div>
             </nuxt-link>
             <div class="header-item header-item-hover">
-              <div @mouseover="isShowProject = true"
+              <div @mouseover="isShowProject = !isShowProject"
                 class="header-item-title-hover"
               >作品集</div>
               <img class="header-item-img" src="@/assets/img/common/arrow.png" alt="arrow">
               <div v-if="isShowProject"
+                @mouseover="isShowProject = true"
                 @mouseleave="isShowProject = false"
                 class="header-item-box"
               >
-                <nuxt-link to="/project">
+                <nuxt-link to="/paint">
                   <div class="header-item-box-text">畫作</div>
                 </nuxt-link>
-                <nuxt-link to="/project">
+                <nuxt-link to="/book">
                   <div class="header-item-box-text">書籍</div>
                 </nuxt-link>
               </div>
             </div>
             <div class="header-item header-item-hover">
-              <div @mouseover="isShowShop = true"
+              <div @mouseover="isShowShop = !isShowShop"
                class="header-item-title-hover"
               >商店</div>
               <img class="header-item-img" src="@/assets/img/common/arrow.png" alt="arrow">
               <div v-if="isShowShop"
+                @mouseover="isShowShop = true"
                 @mouseleave="isShowShop = false"
                 class="header-item-box"
               >
