@@ -2,10 +2,12 @@
   <div class="paint">
     <HeadName :value="'作品集'" />
     <div class="paint-title-row">
-      <div class="paint-title">
-        <div class="paint-title-text">畫作</div>
-        <div class="paint-line"></div>
-      </div>
+      <nuxt-link to="/paint">
+        <div class="paint-title">
+          <div class="paint-title-text">畫作</div>
+          <div class="paint-line"></div>
+        </div>
+      </nuxt-link>
       <nuxt-link to="/book">
         <div class="paint-title">
           <div @mouseover="isShowLinePaint = true"
@@ -66,7 +68,7 @@ function showDetail(num:number) {
 <style lang="scss" scoped>
 
 .paint {
-  max-width: 1020px;
+  max-width: 812px;
   margin: 0px auto;
   padding: 130px 0px 109px;
 
@@ -99,49 +101,98 @@ function showDetail(num:number) {
   &-line {
     width: 27px;
     height: 1px;
+    margin-top: 4px;
     background-color: #948C84;
   }
 
   &-product-row {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   &-product {
-    
+    width: 250px;
+    height: 250px;
+    background: #FFFFFF;
+    margin: 0px 0px 32px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &-popup {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(#000000, 0.5);
+    z-index: 2;
 
     &-outer {
-      
+      margin-top: 72px;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
     }
 
     &-close {
-      
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     &-box {
-      
+      display: flex;
+      margin-top: 8px;
+      padding: 30px 32px;
+      background: #FFFFFF;
     }
 
     &-img {
-      
+      width: 480px;
+      height: 480px;
+      margin-right: 27px;
+      background: #D9D9D9;
     }
 
     &-column {
-      
+      width: 278px;
     }
 
     &-head {
-      
+      font-size: 24px;
     }
 
     &-text {
-      
+      margin-top: 16px;
+      font-size: 14px;
+      color: #948C84;
     }
 
     &-btn {
+      width: 274px;
+      height: 56px;
+      border: 1px solid #948C84;
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
 
+      &:hover {
+        opacity: 0.7;
+      }
     }
     
   }

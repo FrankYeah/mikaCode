@@ -11,10 +11,12 @@
           <div v-if="isShowLine" class="book-line"></div>
         </div>
       </nuxt-link>
-      <div class="book-title">
-        <div class="book-title-text">書籍</div>
-        <div class="book-line"></div>
-      </div>
+      <nuxt-link to="/book">
+        <div class="book-title">
+          <div class="book-title-text">書籍</div>
+          <div class="book-line"></div>
+        </div>
+      </nuxt-link>
     </div>
     <div class="book-row">
        <div class="book-img"></div>
