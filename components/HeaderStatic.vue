@@ -58,7 +58,7 @@
             >
               <div class="header-item">課程</div>
             </nuxt-link>
-            <nuxt-link to="/article"
+            <nuxt-link to="/articles"
               class="header-item-href"
             >
               <div class="header-item">文章</div>

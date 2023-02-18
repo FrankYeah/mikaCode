@@ -64,17 +64,17 @@
             </div>
 
             <div class="footer-column">
-              <nuxt-link to="/article"
+              <nuxt-link to="/articles"
                 class="footer-link-href"
               >
                 <div class="footer-link">文章</div>
               </nuxt-link>
-              <nuxt-link to="/article"
+              <nuxt-link to="/articles"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">媒體報導</div>
               </nuxt-link>
-              <nuxt-link to="/article"
+              <nuxt-link to="/articles"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">精選文章</div>

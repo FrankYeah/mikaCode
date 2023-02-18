@@ -77,14 +77,14 @@
       <div class="index-common-head2">精選文章</div>
       <div class="index-common-head2-line"></div>
       <div class="index-article-row">
-        <nuxt-link to="/article">
+        <nuxt-link to="/articles">
           <div class="index-article-box">
             <div class="index-article-date">2022.06.17</div>
             <div class="index-article-head">帶著正確的裝備與知識，快樂上山平安回家 feat. Salomon</div>
             <div class="index-article-text">台灣又是一個多山且交通便利的地方，自從疫情爆發之後，漸漸的越來越多人的休閒娛樂開始往山上延伸。看著這樣的變化，我心中一則以喜一則以憂，喜是因為我樂見親近大自然成為大眾文化，非常理想化地...</div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/article">
+        <nuxt-link to="/articles">
           <div class="index-article-box">
             <div class="index-article-date">2022.08.23</div>
             <div class="index-article-head">在生活中旅行：深度太魯閣 feat. Gregory Backpacks</div>
