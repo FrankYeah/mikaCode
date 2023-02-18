@@ -112,7 +112,7 @@
 
 <script lang="ts" setup>
 
-const subscript = ref('1')
+const subscript = ref('')
 
 </script>
 
