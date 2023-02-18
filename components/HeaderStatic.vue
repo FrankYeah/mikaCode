@@ -42,13 +42,13 @@
                 @mouseleave="isShowShop = false"
                 class="header-item-box"
               >
-                <nuxt-link to="/shop">
+                <nuxt-link to="/shop/list">
                   <div class="header-item-box-text">畫作</div>
                 </nuxt-link>
-                <nuxt-link to="/shop">
+                <nuxt-link to="/shop/list">
                   <div class="header-item-box-text">衣服</div>
                 </nuxt-link>
-                <nuxt-link to="/shop">
+                <nuxt-link to="/shop/list">
                   <div class="header-item-box-text">書籍</div>
                 </nuxt-link>
               </div>

@@ -46,17 +46,17 @@
             </div>
 
             <div class="footer-column">
-              <nuxt-link to="/shop"
+              <nuxt-link to="/shop/list"
                 class="footer-link-href"
               >
                 <div class="footer-link">商店</div>
               </nuxt-link>
-              <nuxt-link to="/shop"
+              <nuxt-link to="/shop/list"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">畫作</div>
               </nuxt-link>
-              <nuxt-link to="/shop"
+              <nuxt-link to="/shop/list"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">衣服</div>
