@@ -122,6 +122,7 @@ const subscript = ref('')
   border: 0px;
   border-radius: 0px;
   height: 38px;
+  background-color: transparent;
 }
 
 </style>
@@ -226,7 +227,7 @@ const subscript = ref('')
   }
 
   &-input-box {
-    
+    background-color: white;
   }
 
   &-input-element {

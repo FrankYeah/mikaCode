@@ -47,7 +47,7 @@
 <style lang="scss" scoped>
 
 .article {
-  max-width: 1014px;
+  max-width: 1080px;
   margin: 0px auto 0px;
   padding: 145px 0px 0px;
   border-left: 1px solid #948C84;
@@ -90,7 +90,7 @@
     width: 265px;
 
     &-box {
-      margin-bottom: 16px;
+      margin: 0px 20px 16px 0px;
     }
 
     &-title {

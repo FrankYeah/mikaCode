@@ -21,16 +21,16 @@
           <div class="list-title">畫作</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
           </div>
@@ -40,13 +40,13 @@
           <div class="list-title">衣服</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
           </div>
@@ -56,10 +56,10 @@
           <div class="list-title">書籍</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
-            <nuxt-link class="list-href" to="/product">
+            <nuxt-link class="list-href" to="/shop/product">
               <div class="list-img"></div>
             </nuxt-link>
           </div>
