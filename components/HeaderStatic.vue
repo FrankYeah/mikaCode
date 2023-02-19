@@ -72,7 +72,7 @@
         </div>
 
         <div class="header-function">
-          <nuxt-link to="/shop"
+          <nuxt-link to="/shop/cart"
             class="header-shop-href"
           >
             <img class="header-shop" src="@/assets/img/common/shop.png" alt="shop">
