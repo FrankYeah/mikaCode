@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <HeadName :value="'作品集'" />
+    <HeadName :value="'商店'" />
     <div class="list-main">
       <div class="list-tag-box">
         <div @click="showAll"
