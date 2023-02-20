@@ -15,7 +15,8 @@
               <div class="header-item">關於謎卡</div>
             </nuxt-link>
             <div class="header-item header-item-hover">
-              <div @mouseover="isShowProject = !isShowProject"
+              <div @click="isShowProject = !isShowProject"
+                @mouseover="isShowProject = !isShowProject"
                 class="header-item-title-hover"
               >作品集</div>
               <img class="header-item-img" src="@/assets/img/common/arrow.png" alt="arrow">
@@ -33,7 +34,8 @@
               </div>
             </div>
             <div class="header-item header-item-hover">
-              <div @mouseover="isShowShop = !isShowShop"
+              <div @click="isShowShop = !isShowShop"
+               @mouseover="isShowShop = !isShowShop"
                class="header-item-title-hover"
               >商店</div>
               <img class="header-item-img" src="@/assets/img/common/arrow.png" alt="arrow">

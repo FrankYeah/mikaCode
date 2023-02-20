@@ -81,6 +81,7 @@ function sendForm() {
     width: 390px;
     margin: 13px 0px;
     border: 1px solid #D4CFCD;
+    background-color: white;
   }
 
   &-textarea {
