@@ -86,6 +86,96 @@
           </div>
         </div>
       </div>
+
+      <div class="header-rwd">
+        <nuxt-link to="/"
+          class="header-rwd-logo-href"
+        >
+          <img class="header-rwd-logo" src="@/assets/img/common/logo.png" alt="logo">
+        </nuxt-link>
+        <div class="header-rwd-icon-row">
+          <img @click="isShowlang = !isShowlang"
+           class="header-rwd-icon"
+            src="@/assets/img/common/lang.png"
+            alt="lang"
+          >
+          <nuxt-link to="/shop/list"
+            class="header-rwd-icon-href"
+          >
+            <img class="header-rwd-icon" src="@/assets/img/common/shop.png" alt="shop">
+          </nuxt-link>
+          <img @click="isShowMenuPopup = true"
+            class="header-rwd-icon-menu"
+            src="@/assets/img/common/menu.png"
+            alt="menu"
+          >
+        <!-- show -->
+        <div v-if="isShowlang"
+         class="header-rwd-show"
+        >
+          <div class="header-rwd-show-lang">
+            <div>中文</div>
+            <div>｜</div>
+            <div>EN</div>
+          </div>
+        </div>
+        </div>
+        <!-- popup -->
+        <div v-if="isShowMenuPopup"          
+          class="header-rwd-popup"
+        >
+          <img @click="isShowMenuPopup = false"
+           class="header-rwd-popup-close"
+            src="@/assets/img/common/closeMenu.png"
+            alt="close"
+          >
+          <nuxt-link to="/about">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-title">關於謎卡</div>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <div class="header-rwd-popup-title">作品集</div>
+          </nuxt-link>
+          <div class="header-rwd-popup-row">
+            <nuxt-link to="/paint">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">畫作</div>
+            </nuxt-link>
+            <nuxt-link to="/book">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">書籍</div>
+            </nuxt-link>
+          </div>
+          
+          <nuxt-link to="/">
+            <div class="header-rwd-popup-title">商店</div>
+          </nuxt-link>
+          <div class="header-rwd-popup-row">
+            <nuxt-link to="/shop/list">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">全部</div>
+            </nuxt-link>
+            <nuxt-link to="/shop/list">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">畫作</div>
+            </nuxt-link>
+          </div>
+          <div class="header-rwd-popup-row">
+            <nuxt-link to="/shop/list">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">衣服</div>
+            </nuxt-link>
+            <nuxt-link to="/shop/list">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">書籍</div>
+            </nuxt-link>
+          </div>
+
+          <nuxt-link to="/course">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-title">課程</div>
+          </nuxt-link>
+          <nuxt-link to="/articles">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-title">文章</div>
+          </nuxt-link>
+          <nuxt-link to="/contact">
+            <div @click="isShowMenuPopup = false" class="header-rwd-popup-title">聯繫我們</div>
+          </nuxt-link>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -103,6 +193,9 @@ if(routers.currentRoute.value.path == '/') {
 } else {
   indexPage.value = false
 }
+
+const isShowMenuPopup = ref(false)
+const isShowlang = ref(false)
 
 console.log(indexPage.value)
 
@@ -129,6 +222,10 @@ console.log(indexPage.value)
 
   &-desktop {
 
+  }
+
+  &-rwd {
+    display: none;
   }
 
   &-center {
@@ -257,13 +354,109 @@ console.log(indexPage.value)
 
 @media( max-width: 1023px ){
 
-  .footer {
+.header {
+  
 
-    &- {
-      
-    }
-    
+  &-outer {
+    width: 100%;
   }
+
+  &-desktop {
+    display: none;
+  }
+
+  &-rwd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-logo-href {
+
+    }
+
+    &-logo {
+      width: 66px;
+      height: 33px;
+    }
+
+    &-icon-row {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      width: 19px;
+      height: 19px;
+      margin-right: 18px;
+    }
+
+    &-icon-menu {
+      width: 16px;
+      height: 16px;
+    }
+
+    &-icon-href {
+
+    }
+
+    &-show {
+      position: absolute;
+      top: 46px;
+      padding: 12px 16px;
+      border-radius: 2px;
+      background-color: white;
+    }
+
+    &-show-lang {
+      display: flex;
+
+      & div:last-child {
+        color: #D4CFCD;
+      }
+    }
+
+    &-popup {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100vw;
+      padding: 24px 24px 64px 32px;
+      background-color: white;
+      z-index: 2;
+
+      &-close {
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      &-title {
+        margin-top: 24px;
+        font-size: 16px;
+      }
+
+      &-row {
+        display: flex;
+        
+        & a:first-child {
+          margin-right: 160px;
+        }
+      }
+
+      &-text {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #948C84;
+      }
+
+    }
+  }
+
+}
 
 }
 
