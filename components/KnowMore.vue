@@ -39,13 +39,18 @@ const props = defineProps(['value', 'link'])
 
 @media( max-width: 1023px ){
 
-  .footer {
+.know-more {
+  
+  
+  &-box {
+    justify-content: center;
+  }
 
-    &- {
-      
-    }
+  &-arrow {
     
   }
+
+}
 
 }
 

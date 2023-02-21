@@ -12,8 +12,8 @@
     <div class="index-about">
       <div class="index-about-outer">
         <div class="index-about-box">
-          <div class="index-common-header">謎卡 Mika</div>
-          <div class="index-common-header-line"></div>
+          <div class="index-common-header2">謎卡 Mika</div>
+          <div class="index-common-header-line2"></div>
           <div class="index-about-head">一位作家、旅人、講師、同時是個野孩子。</div>
           <div class="index-about-text">曾走訪巴基斯坦、土耳其、埃及、匈牙利等10+個國家，2016年出版第一本旅行文學書《在遠方醒來》，並拿下金石堂當月銷售冠軍。現為自由作家、講師，也在TVBS和女人迷寫專欄。我相信愛與善良的重要性，喜歡大自然、葡萄酒與狗。</div>
           <KnowMore :value="'了解更多'" :link="'about'" />
@@ -36,7 +36,7 @@
             <KnowMore :value="'立即瀏覽'" :link="'/paint'" />
           </div>
         </div>
-        <div class="index-project-box">
+        <div class="index-project-box-reverse">
           <div class="index-project-right">
             <div class="index-project-head">當你開始踏上路途，路就會自己展現</div>
             <div class="index-project-text">這些年的故事，我將在書中一五一的告訴你</div>
@@ -78,14 +78,14 @@
       <div class="index-common-head2">精選文章</div>
       <div class="index-common-head2-line"></div>
       <div class="index-article-row">
-        <nuxt-link to="/articles">
+        <nuxt-link to="/article/20230217">
           <div class="index-article-box">
             <div class="index-article-date">2022.06.17</div>
             <div class="index-article-head">帶著正確的裝備與知識，快樂上山平安回家 feat. Salomon</div>
             <div class="index-article-text">台灣又是一個多山且交通便利的地方，自從疫情爆發之後，漸漸的越來越多人的休閒娛樂開始往山上延伸。看著這樣的變化，我心中一則以喜一則以憂，喜是因為我樂見親近大自然成為大眾文化，非常理想化地...</div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/articles">
+        <nuxt-link to="/article/20230217">
           <div class="index-article-box">
             <div class="index-article-date">2022.08.23</div>
             <div class="index-article-head">在生活中旅行：深度太魯閣 feat. Gregory Backpacks</div>
@@ -141,7 +141,19 @@ const isVisible = ref(false);
     background-color: transparent;
   }
 
+  &-common-header2 {
+    font-size: 16px;
+    background-color: transparent;
+  }
+
   &-common-header-line {
+    width: 51px;
+    height: 1px;
+    margin-top: 8px;
+    background-color: #D4CFCD;
+  }
+
+  &-common-header-line2 {
     width: 51px;
     height: 1px;
     margin-top: 8px;
@@ -229,6 +241,13 @@ const isVisible = ref(false);
     padding: 120px 0px 30px;
 
     &-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0px;
+    }
+
+    &-box-reverse {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -372,13 +391,199 @@ const isVisible = ref(false);
 
 @media( max-width: 1023px ){
 
-  .footer {
+.index {
 
-    &- {
-      
-    }
+  &-common-header {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  &-common-header2 {
+    margin-top: 54px;
+  }
+
+  &-common-header-line {
+    margin: 8px auto 0px;
     
   }
+
+  &-common-header-line2 {
+    
+  }
+
+  &-common-head2 {
+    
+  }
+
+  &-common-head2-line {
+    
+  }
+  
+  &-bg {
+    
+
+    &-box {
+      // padding-top: 35vh;
+    }
+
+    &-head {
+      
+    }
+
+    &-text {
+      
+    }
+
+  }
+
+  // about
+  
+  &-about {
+    
+
+    &-outer {
+      flex-direction: column-reverse;
+      padding: 64px 32px 120px;
+    }
+
+    &-box {
+      
+    }
+
+    &-head {
+      margin-top: 32px;
+    }
+
+    &-text {
+      width: 100%;
+      margin: 32px 0px;
+    }
+
+    &-img {
+      max-width: 330px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // project
+  
+  &-project {
+    padding: 64px 0px 88px;
+
+    &-box {
+      flex-direction: column;
+      padding: 32px;
+    }
+
+    &-box-reverse {
+      flex-direction: column-reverse;
+      padding: 32px;
+    }
+
+    &-img-box {
+      padding: 50px;
+    }
+
+    &-img-paint {
+      width: 220px;
+      height: 220px;
+    }
+
+    &-img {
+      width: 320px;
+      height: auto;
+    }
+
+    &-right {
+
+    }
+
+    &-head {
+      width: 100%;
+      margin-top: 32px;
+      font-size: 20px;
+    }
+
+    &-text {
+      margin: 32px 0px;
+      font-size: 14px;
+    }
+
+  }
+
+  // product
+  
+  &-product {
+    padding: 64px 0px 120px;
+
+    &-outer {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-box {
+      width: 320px;
+      height: 300px;
+      margin-bottom: 54px;
+    }
+
+    &-img1 {
+      
+    }
+
+    &-img2 {
+      
+    }
+
+    &-img3 {
+      
+    }
+
+    &-text {
+      
+    }
+
+    &-all {
+      margin-top: 0px;
+    }
+
+  }
+
+  // article
+  
+  &-article {
+    padding: 64px 0px 120px;
+    &-row {
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 0px;
+    }
+
+    &-box {
+      width: calc(100% - 64px);
+      margin: 0px 32px 32px;
+    }
+
+    &-date {
+      
+    }
+
+    &-head {
+      font-size: 14px;
+    }
+
+    &-text {
+      
+    }
+
+    &-all {
+      
+    }
+
+  }
+
+}
 
 }
 
