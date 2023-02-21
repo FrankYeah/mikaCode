@@ -95,6 +95,17 @@
 const isShowProject = ref(false)
 const isShowShop = ref(false)
 
+const routers = useRouter()
+const indexPage = ref(true)
+
+if(routers.currentRoute.value.path == '/') {
+  indexPage.value = true
+} else {
+  indexPage.value = false
+}
+
+console.log(indexPage.value)
+
 </script>
 
 <style lang="scss" scoped>

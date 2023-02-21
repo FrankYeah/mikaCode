@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <HeaderStatic />
     <div class="index-bg">
       <div class="index-bg-box">
         <div class="index-bg-head">謎卡 Mika</div>
@@ -32,14 +33,14 @@
           <div class="index-project-right">
             <div class="index-project-head">所謂的「繪畫真理」，我將在畫中告訴你</div>
             <div class="index-project-text">將探索世界的閱歷呈現在畫作中，透過謎卡的畫作看見世界的美</div>
-            <KnowMore :value="'立即瀏覽'" :link="'project'" />
+            <KnowMore :value="'立即瀏覽'" :link="'/paint'" />
           </div>
         </div>
         <div class="index-project-box">
           <div class="index-project-right">
             <div class="index-project-head">當你開始踏上路途，路就會自己展現</div>
             <div class="index-project-text">這些年的故事，我將在書中一五一的告訴你</div>
-            <KnowMore :value="'立即瀏覽'" :link="'project'" />
+            <KnowMore :value="'立即瀏覽'" :link="'book'" />
           </div>
           <img class="index-project-img" src="@/assets/img/book/cover.png" alt="shop">
         </div>
@@ -69,7 +70,7 @@
           </div>
         </nuxt-link>
       </div>
-      <KnowMore class="index-product-all" :value="'查看全部'" :link="'shop'" />
+      <KnowMore class="index-product-all" :value="'查看全部'" :link="'shop/list'" />
     </div>
       
     <!-- article -->
@@ -92,7 +93,7 @@
           </div>
         </nuxt-link>
       </div>
-      <KnowMore class="index-article-all" :value="'查看全部'" :link="'article'" />
+      <KnowMore class="index-article-all" :value="'查看全部'" :link="'articles'" />
     </div>
 
     <brandStatic />
@@ -101,6 +102,33 @@
 
 <script setup>
 
+const isVisible = ref(false);
+
+  // const handleScroll = () => {
+  //   let element = document.querySelector('.index-project');
+  //   let elementPosition = element.getBoundingClientRect().top;
+  //   let screenHeight = window.innerHeight;
+
+  //   if (elementPosition < screenHeight) {
+  //     isVisible.value = true
+  //     myFunction();
+  //   } else {
+  //     isVisible.value = false
+  //     console.log("離開");
+  //   }
+  // }
+
+  // const myFunction = () => {
+  //   console.log("觸發了 myFunction()");
+  // }
+
+  // onMounted(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  // });
+
+  // onUnmounted(() => {
+  //   window.removeEventListener('scroll', handleScroll);
+  // });
 
 </script>
 

@@ -87,12 +87,14 @@
           <div class="footer-right-row">
             <div class="footer-mail">mikaontheroad@outlook.com</div>
             
-            <a href="https://www.facebook.com/mikaontheroad" target="_blank">
-              <img class="footer-social" src="@/assets/img/common/fb.png" alt="logo">
-            </a>
-            <a href="https://www.instagram.com/mika_ontheroad/" target="_blank">
-              <img class="footer-social" src="@/assets/img/common/ig.png" alt="logo">
-            </a>
+            <div class="footer-social-box">
+              <a href="https://www.facebook.com/mikaontheroad" target="_blank">
+                <img class="footer-social" src="@/assets/img/common/fb.png" alt="logo">
+              </a>
+              <a href="https://www.instagram.com/mika_ontheroad/" target="_blank">
+                <img class="footer-social" src="@/assets/img/common/ig.png" alt="logo">
+              </a>
+            </div>
           </div>
           <div class="footer-input-row">
             <div class="footer-input-box">
@@ -213,6 +215,10 @@ const subscript = ref('')
     margin-right: 3px;
   }
 
+  &-social-box {
+    display: flex;
+  }
+
   &-social {
     margin-left: 16px;
     opacity: 0.7;
@@ -258,6 +264,96 @@ const subscript = ref('')
 @media( max-width: 1023px ){
 
   .footer {
+
+  &-outer {
+    
+  }
+
+  &-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 32px;
+  }
+
+  &-left {
+
+  }
+
+  &-logo-href {
+    
+  }
+
+  &-logo {
+    
+  }
+
+  &-row {
+    flex-wrap: wrap;
+  }
+
+  &-column {
+    width: 128px;
+    margin: 0px 0px 32px;
+
+    &:last-child {
+      
+    }
+  }
+
+  &-link-href {
+    
+  }
+
+  &-link {
+    
+  }
+
+  &-link-inner {
+    
+  }
+
+  &-right {
+    margin-top: 32px;
+  }
+
+  &-right-row {
+    flex-direction: column-reverse;
+    align-items: initial;
+  }
+
+  &-mail {
+    margin-top: 12px;
+  }
+
+  &-social {
+    margin: 0px 16px 0px 0px;
+  }
+
+  &-social-box {
+
+  }
+
+  &-input-row {
+    
+  }
+
+  &-input-box {
+    
+  }
+
+  &-input-element {
+    max-width: 160px;
+    width: 48vw;
+  }
+
+  &-btn {
+    font-size: 14px;
+  }
+  
+
+  &-copyright {
+    font-size: 10px;
+  }
     
   }
 

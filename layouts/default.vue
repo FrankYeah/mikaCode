@@ -1,11 +1,36 @@
 <template>
   <div >
-    <HeaderStatic />
+    <HeaderStatic v-if="otherPage" />
     <NuxtPage />
     <FooterStatic />
     <slot />
   </div>
 </template>
+
+<script lang="ts" setup>
+
+const router = useRouter()
+const otherPage = ref(true)
+
+if(router.currentRoute.value.path == '/') {
+  otherPage.value = false
+} else {
+
+  otherPage.value = true
+}
+
+watch(
+  () => router.currentRoute.value.path,
+  (currentRoute, previousRoute) => {
+    if(currentRoute == '/') {
+      otherPage.value = false
+    } else {
+      otherPage.value = true
+    }
+  }
+)
+
+</script>
 
 <style lang="scss">
 
