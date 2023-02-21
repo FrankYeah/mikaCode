@@ -175,4 +175,16 @@ const addNum = ref(1)
 
 }
 
+@media( max-width: 1023px ){
+
+  .footer {
+
+    &- {
+      
+    }
+    
+  }
+
+}
+
 </style>
