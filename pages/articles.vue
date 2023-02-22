@@ -1,6 +1,6 @@
 <template>
   <div class="articles">
-    <HeadName :value="'作品集'" />
+    <HeadName :value="'文章'" />
     <div class="articles-common-title-box">
       <div class="articles-common-title">媒體受訪</div>
       <div class="articles-common-line"></div>
@@ -260,13 +260,112 @@
 
 @media( max-width: 1023px ){
 
-  .footer {
+.articles {
+  padding: 90px 0px 120px;
 
-    &- {
+  &-common {
+    
+
+    &-title-box {
+      margin-top: 32px;
+    }
+
+    &-title {
       
     }
-    
+
+    &-line {
+      margin-bottom: 51px;
+    }
+
   }
+
+  &-media {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 32px;
+
+    &-box {
+      max-width: 450px;
+      width: 100%;
+      margin: 0px 0px 54px;
+    }
+
+    &-img {
+      
+    }
+
+    &-row {
+      
+    }
+
+    &-date {
+      
+    }
+
+    &-name {
+      
+    }
+
+    &-text {
+      font-size: 16px;
+    }
+
+  }
+  
+
+  &-more {
+    margin: 0px 0px 54px;
+    
+
+    &-text {
+      
+    }
+
+    &-img {
+      
+    }
+
+  }
+
+
+  &-article {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 32px;
+
+    &-box {
+      max-width: 450px;
+      width: 100%;
+      margin: 0px 0px 32px;
+    }
+
+    &-date {
+      
+    }
+
+    &-head {
+      font-size: 14px;
+    }
+
+    &-text {
+      
+    }
+
+  }
+
+
+  &-load {
+    margin-top: 22px;
+
+    &-text {
+      
+    }
+
+  }
+  
+
+}
 
 }
 
