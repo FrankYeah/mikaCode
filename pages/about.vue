@@ -78,13 +78,50 @@
 
 @media( max-width: 1023px ){
 
-  .footer {
+.about {
+  padding: 105px 0px 0px;
 
-    &- {
-      
-    }
+  &-outer {
+    flex-direction: column-reverse;
+    padding: 0px 32px;
+  }
+
+  &-box {
+    width: 100%;
+    margin-bottom: 120px;
+  }
+
+  &-head {
+    margin-top: 48px;
+  }
+
+  &-text1 {
+    margin-top: 32px;
+  }
+
+  &-text2 {
+    margin-top: 32px;
+  }
+
+  &-text3 {
+    margin-top: 32px;
+  }
+
+  &-row {
+    margin-top: 32px;
+  }
+
+  &-social {
     
   }
+
+  &-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+
+}
 
 }
 
