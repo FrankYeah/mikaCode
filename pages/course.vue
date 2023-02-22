@@ -59,13 +59,29 @@
 
 @media( max-width: 1023px ){
 
-  .footer {
+.course {
+  padding: 90px 0px 280px;
 
-    &- {
-      
-    }
-    
+  &-box {
+    width: 100%;
   }
+
+  &-title {
+    margin-top: 130px;
+    font-size: 20px;
+  }
+
+  &-text {
+    margin-top: 32px;
+    font-size: 14px;
+    padding: 0px 32px;
+  }
+
+  &-btn {
+    margin-top: 32px;
+  }
+
+}
 
 }
 
