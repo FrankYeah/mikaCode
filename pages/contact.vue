@@ -111,13 +111,48 @@ function sendForm() {
 
 @media( max-width: 1023px ){
 
-  .footer {
+.about {
+  padding: 90px 0px 118px;
 
-    &- {
-      
-    }
+  &-outer {
+    max-width: 500px;
+  }
+
+  &-row {
+    flex-direction: column;
+    margin-top: 32px;
+    padding: 0px 32px;
+  }
+
+  &-head {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  &-box {
+    width: 100%;
+    margin-top: 64px;
+  }
+
+  &-title {
     
   }
+
+  &-input {
+    width: 100%;
+  }
+
+  &-textarea {
+    width: 100%;
+  }
+
+  &-btn {
+    width: 100%;
+    height: 38px;
+    margin-top: 12px;
+  }
+
+}
 
 }
 
