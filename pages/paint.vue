@@ -201,13 +201,87 @@ function showDetail(num:number) {
 
 @media( max-width: 1023px ){
 
-  .footer {
+.paint {
+  padding: 90px 0px 66px;
 
-    &- {
+  &-title-row {
+    margin: 60px 0px 32px;
+  }
+
+  &-title {
+    margin: 0px 36px;
+  }
+
+  &-title-less {
+    
+  }
+
+  &-title-text {
+    font-size: 16px;
+  }
+
+  &-line {
+    
+  }
+
+  &-product-row {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 32px;
+  }
+
+  &-product {
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+    margin: 0px 0px 54px;
+  }
+
+  &-popup {
+    
+
+    &-outer {
+      margin-top: 110px;
+      padding: 0px 32px;
+    }
+
+    &-close {
       
+    }
+
+    &-box {
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 24px 32px;
+    }
+
+    &-img {
+      max-width: 285px;
+      width: 100%;
+      height: 245px;
+      margin-right: 0px;
+    }
+
+    &-column {
+      width: 100%;
+    }
+
+    &-head {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+
+    &-text {
+      margin-top: 24px;
+    }
+
+    &-btn {
+      width: 100%;
     }
     
   }
+
+}
 
 }
 

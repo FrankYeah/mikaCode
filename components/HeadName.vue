@@ -34,13 +34,17 @@ const props = defineProps(['value'])
 
 @media( max-width: 1023px ){
 
-  .footer {
-
-    &- {
-      
-    }
-    
+.head-name {
+  
+  &-line {
+    width: 62px;
   }
+  
+  &-text {
+    font-size: 16px;
+  }
+
+}
 
 }
 
