@@ -205,7 +205,7 @@ function showDetail(num:number) {
   padding: 90px 0px 66px;
 
   &-title-row {
-    margin: 60px 0px 32px;
+    margin: 32px 0px 32px;
   }
 
   &-title {

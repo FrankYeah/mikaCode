@@ -40,7 +40,7 @@
         </div>
     </div>
     
-    <div class="book-row">
+    <div class="book-row book-row-reverse">
         <div class="book-box">
            <div class="book-name">留下來生活</div>
             <div class="book-text">
@@ -183,13 +183,70 @@ const isShowLine = ref(false)
 
 @media( max-width: 1023px ){
 
-  .footer {
+.book {
+  padding: 90px 0px 88px;
 
-    &- {
-      
-    }
+  &-title-row {
+    margin: 32px 0px 32px;
+  }
+
+  &-title {
+    margin: 0px 36px;
+  }
+
+  &-title-less {
     
   }
+
+  &-title-text {
+    font-size: 16px;
+  }
+
+  &-line {
+    
+  }
+
+  &-row {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0px 32px 32px;
+  }
+
+  &-row-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &-img {
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+  }
+
+  &-box {
+    width: 100%;
+  }
+
+  &-name {
+    margin-top: 24px;
+    font-size: 20px; 
+  }
+
+  &-text {
+    margin-top: 24px;
+  }
+
+  &-store-row {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  &-store {
+    margin: 24px 16px 0px 0px;
+  }
+
+}
 
 }
 
