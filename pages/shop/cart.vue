@@ -4,17 +4,23 @@
     <div class="cart-main">
       <div class="cart-outer">
         <div class="cart-title">產品</div>
+        <div class="cart-line"></div>
         <div class="cart-box">
           <div class="cart-img"></div>
           <div class="cart-detail">
             <div class="cart-name">產品名稱</div>
             <div class="cart-price">NT.5000</div>
-            <div class="cart-row">
+            <div class="cart-row cart-desktop">
               <div class="cart-cal">-</div>
               <div class="cart-count"></div>
               <div class="cart-cal">+</div>
             </div>
             <div class="cart-remove">移除</div>
+          </div>
+          <div class="cart-row cart-rwd">
+            <div class="cart-cal">-</div>
+            <div class="cart-count"></div>
+            <div class="cart-cal">+</div>
           </div>
         </div>
         <div class="cart-box">
@@ -22,12 +28,17 @@
           <div class="cart-detail">
             <div class="cart-name">產品名稱</div>
             <div class="cart-price">NT.5000</div>
-            <div class="cart-row">
+            <div class="cart-row cart-desktop">
               <div class="cart-cal">-</div>
               <div class="cart-count"></div>
               <div class="cart-cal">+</div>
             </div>
             <div class="cart-remove">移除</div>
+          </div>
+          <div class="cart-row cart-rwd">
+            <div class="cart-cal">-</div>
+            <div class="cart-count"></div>
+            <div class="cart-cal">+</div>
           </div>
         </div>
         <div class="cart-box">
@@ -35,19 +46,26 @@
           <div class="cart-detail">
             <div class="cart-name">產品名稱</div>
             <div class="cart-price">NT.5000</div>
-            <div class="cart-row">
+            <div class="cart-row cart-desktop">
               <div class="cart-cal">-</div>
               <div class="cart-count"></div>
               <div class="cart-cal">+</div>
             </div>
             <div class="cart-remove">移除</div>
+          </div>
+          <div class="cart-row cart-rwd">
+            <div class="cart-cal">-</div>
+            <div class="cart-count"></div>
+            <div class="cart-cal">+</div>
           </div>
         </div>
       </div>
 
       <div class="cart-sum">
-        <div class="cart-sum-remember">小記</div>
-        <div class="cart-sum-num">$7,100 NTD</div>
+        <div class="cart-sum-box">
+          <div class="cart-sum-remember">小記</div>
+          <div class="cart-sum-num">$7,100 NTD</div>
+        </div>
         <nuxt-link to="/shop/detail">
           <div class="cart-sum-checkout">前往結賬</div>
         </nuxt-link>
@@ -66,6 +84,14 @@
   max-width: 1014px;
   margin: 0px auto 0px;
   padding: 130px 0px 100px;
+
+  &-desktop {
+    display: flex;
+  }
+
+  &-rwd {
+    display: none!important;
+  }
 
   &-main {
     display: flex;
@@ -162,6 +188,7 @@
     &-num {
       margin-top: 10px;
       font-size: 24px;
+      font-weight: bold;
     }
 
     &-checkout {
@@ -186,13 +213,109 @@
 
 @media( max-width: 1023px ){
 
-  .footer {
+.cart {
+  padding: 90px 0px 40px;
 
-    &- {
-      
+  &-desktop {
+    display: none;
+  }
+
+  &-rwd {
+    display: flex!important;;
+  }
+
+  &-main {
+    flex-direction: column;
+    margin-top: 16px;
+  }
+
+  &-outer {
+    width: 100%;
+    padding: 0px 32px;
+  }
+
+  &-title {
+    margin-bottom: 0px;
+  }
+
+  &-line {
+    width: 27px;
+    height: 1px;
+    margin-top: 4px;
+    background-color: #948C84;
+  }
+
+  &-box {
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin: 32px 0px 0px;
+    padding: 16px 16px 24px;
+  }
+
+  &-img {
+    margin-right: 16px;
+  }
+
+  &-detail {
+    width: calc(100% - 152px);
+  }
+
+  &-name {
+    
+  }
+
+  &-price {
+    
+  }
+
+  &-row {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  &-cal {
+    width: 32px;
+    height: 32px;
+    
+  }
+
+  &-count {
+    width: 100%;
+    height: 32px;
+  }
+
+  &-remove {
+    margin-top: 80px;
+  }
+
+  &-sum {
+    margin-top: 54px;
+    padding: 16px 32px;
+    background-color: white;
+
+    &-box {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-remember {
+      font-size: 14px;
+    }
+
+    &-num {
+      margin-top: 0px;
+      font-size: 16px;
+    }
+
+    &-checkout {
+      width: 100%;
+      margin-top: 12px;
     }
     
   }
+
+}
 
 }
 
