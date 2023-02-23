@@ -247,13 +247,123 @@ const inputShop = reactive({
 
 @media( max-width: 1023px ){
 
-  .footer {
+.detail {
+  padding: 81px 0px 64px;
 
-    &- {
+  &-main {
+
+  }
+
+  &-back {
+
+    &-row {
+      padding: 0px 32px;
+    }
+
+    &-text1 {
+      
+    }
+
+    &-text2 {
+      
+    }
+
+    &-text3 {
+      
+    }
+
+    &-img {
       
     }
     
   }
+
+  &-title {
+    margin-top: 32px;
+    padding: 0px 32px;
+    font-size: 14px;
+  }
+
+  &-outer {
+    flex-direction: column;
+  }
+
+  &-left {
+    width: 100%;
+  }
+
+  &-bg {
+    padding: 16px 32px;
+  }
+
+  &-head {
+    
+  }
+
+  &-input-box {
+    
+  }
+
+  &-input {
+    
+  }
+
+  &-right {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  &-row {
+    
+  }
+
+  &-write {
+    
+  }
+
+  &-num {
+    
+  }
+
+  &-line {
+    width: 100%;
+  }
+
+  &-total {
+    
+  }
+
+  &-btn {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &-product {
+    padding-left: 32px;
+
+    &-img {
+      
+    }
+
+    &-box {
+      
+    }
+
+    &-name {
+      
+    }
+
+    &-num {
+      margin-top: 8px;
+    }
+
+    &-count {
+      margin-top: 26px;
+    }
+    
+  }
+
+}
 
 }
 
