@@ -130,13 +130,62 @@
 
 @media( max-width: 1023px ){
 
-  .footer {
+.confirm {
+  padding: 90px 0px 64px;
 
-    &- {
-      
-    }
+  &-main {
+    margin-top: 32px;
+  }
+
+  &-bg {
+    padding: 24px 32px;
+  }
+
+  &-logo {
     
   }
+
+  &-head {
+
+  }
+
+  &-desc {
+    
+  }
+
+  &-text {
+    
+  }
+
+  &-row {
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  &-left {
+    width: 100%;
+    padding: 24px 32px;
+  }
+
+  &-grey {
+    
+  }
+
+  &-right {
+    width: 100%;
+    margin-top: 24px;
+    padding: 24px 32px;
+  }
+
+  &-line {
+    
+  }
+
+  &-content {
+    
+  }
+
+}
 
 }
 
