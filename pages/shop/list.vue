@@ -194,13 +194,79 @@ const selectShow = reactive({
 
 @media( max-width: 1023px ){
 
-  .footer {
+.list {
+  padding: 90px 0px 32px;
 
-    &- {
-      
+  &-main {
+    flex-direction: column;
+    margin-top: 21px;
+    padding: 0px 32px;
+  }
+
+  &-tag-box {
+    max-width: 500px;
+    display: flex;
+    margin: 0px auto 32px;
+  }
+
+  &-tag {
+    margin: 0px 40px 0px 0px;
+    font-size: 14px;
+
+    &:last-child {
+      margin: 0px;
     }
+  }
+
+  &-tag-underline {
     
   }
+
+  &-outer {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &-inner {
+    
+  }
+
+  &-title {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+
+  &-line {
+    width: 27px;
+    height: 1px;
+    margin: 4px 0px 16px;
+  }
+
+  &-box {
+    justify-content: center;
+  }
+
+  &-img {
+    max-width: 500px;
+    width: 100%;
+    height: 330px;
+    margin: 0px auto 32px;
+  }
+
+  &-href {
+    width: 100%;
+  }
+  
+  &-href:last-child:nth-child(3n-2) {
+    margin-right: 0px;
+  }
+
+  &-href:last-child:nth-child(3n-1) {
+    margin-right: 0px;
+  }
+
+}
 
 }
 

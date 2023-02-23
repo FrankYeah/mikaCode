@@ -177,13 +177,86 @@ const addNum = ref(1)
 
 @media( max-width: 1023px ){
 
-  .footer {
+.product {
+  padding: 81px 32px 0px;
 
-    &- {
-      
-    }
+  &-main {
+    flex-direction: column;
+    padding: 0px 0px 120px;
+  }
+
+  &-img-box {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &-img {
+    width: 100%;
+    height: 360px;
+    margin-top: 24px;
+  }
+
+  &-back {
+    width: 74px;
+    height: 30px;
+    margin-top: 0px;
+    font-size: 10px;
+  }
+
+  &-detail {
+    width: 100%;
+  }
+
+  &-name {
+    margin-top: 24px;
+  }
+
+  &-line {
     
   }
+
+  &-price-name {
+    margin-top: 16px;
+  }
+
+  &-price {
+    
+  }
+
+  &-quantity {
+    margin-top: 24px;
+  }
+
+  &-row {
+    margin-top: 12px;
+  }
+
+  &-cal {
+    width: 38px;
+    height: 38px;
+  }
+
+  &-num {
+    width: 100%;
+    height: 38px;
+  }
+
+  &-add {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  &-desc {
+    margin-top: 24px;
+  }
+
+  &-text {
+    
+  }
+
+}
 
 }
 
