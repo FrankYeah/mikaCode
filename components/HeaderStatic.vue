@@ -8,6 +8,7 @@
           >
             <img class="header-logo" src="@/assets/img/common/logo.png" alt="logo">
           </nuxt-link>
+          
           <div class="header-row">
             <nuxt-link to="/about"
               class="header-item-href"
@@ -21,6 +22,7 @@
               >作品集</div>
               <img class="header-item-img" src="@/assets/img/common/arrow.png" alt="arrow">
               <div v-if="isShowProject"
+                @click="closeProjectShop"
                 @mouseover="isShowProject = true"
                 @mouseleave="isShowProject = false"
                 class="header-item-box"
@@ -40,6 +42,7 @@
               >商店</div>
               <img class="header-item-img" src="@/assets/img/common/arrow.png" alt="arrow">
               <div v-if="isShowShop"
+                @click="closeProjectShop"
                 @mouseover="isShowShop = true"
                 @mouseleave="isShowShop = false"
                 class="header-item-box"
@@ -75,9 +78,11 @@
 
         <div class="header-function">
           <nuxt-link to="/shop/cart"
-            class="header-shop-href"
+            :class="['header-shop-href', {'header-shop-with': shopStore.shopList.length > 0}]"
           >
-            <img class="header-shop" src="@/assets/img/common/shop.png" alt="shop">
+            <img class="header-shop"
+              src="@/assets/img/common/shop.png" alt="shop"
+             >
           </nuxt-link>
           <div class="header-lang">
             <div @click="setLocale('zh')"
@@ -188,15 +193,25 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 
 import { useI18n } from 'vue-i18n'
-const { locale, setLocale } = useI18n()
+import { useShopStore } from '@/stores/shop'
+
+// 桌面版 hover
 
 const isShowProject = ref(false)
 const isShowShop = ref(false)
 
+function closeProjectShop() {
+  isShowProject.value = false
+  isShowShop.value = false
+}
+
+// 判斷是否為首頁
+
 const routers = useRouter()
+
 const indexPage = ref(true)
 
 if(routers.currentRoute.value.path == '/') {
@@ -205,23 +220,34 @@ if(routers.currentRoute.value.path == '/') {
   indexPage.value = false
 }
 
+// 手機版 popup
+
 const isShowMenuPopup = ref(false)
 const isShowlang = ref(false)
 
-console.log(indexPage.value)
+// 語言切換
+
+const { locale, setLocale } = useI18n()
 
 const isZh = ref('zh')
 isZh.value = locale.value
-console.log(locale.value)
 
 watch(
   () => locale.value,
   (currentLang, previousLang) => {
     isZh.value = currentLang
-    console.log(currentLang)
-    // console.log(previousLang)
   }
 )
+
+// 購物車
+
+const shopStore = useShopStore()
+
+// shopStore.addShopItem({ name: 'apple', price: 10 })
+// console.log(shopStore.shopList)
+// shopStore.removeShopItem(0)
+// console.log(shopStore.shopList)
+
 
 </script>
 
@@ -349,7 +375,22 @@ watch(
   }
 
   &-shop {
+
+  }
+
+  &-shop-with {
+    position: relative;
     
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 10px;
+      height: 10px;
+      background-color: #FF0000;
+      border-radius: 100%;
+    }
   }
 
   &-lang {
