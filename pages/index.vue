@@ -4,7 +4,7 @@
     <div class="index-bg">
       <div class="index-bg-box">
         <div class="index-bg-head">謎卡 Mika</div>
-        <div class="index-bg-text">一位作家、旅人、講師、同時是個野孩子。</div>
+        <div class="index-bg-text">{{ $t('hello') }}</div>
       </div>
     </div>
 

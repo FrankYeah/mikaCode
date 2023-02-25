@@ -80,9 +80,13 @@
             <img class="header-shop" src="@/assets/img/common/shop.png" alt="shop">
           </nuxt-link>
           <div class="header-lang">
-            <div class="header-lang-ch">中文</div>
+            <div @click="setLocale('zh')"
+              :class="['header-lang-ch', {'header-lang-select': isZh == 'zh'}]"
+             >中文</div>
             ｜
-            <div class="header-lang-en">EN</div>
+            <div @click="setLocale('en')"
+             :class="['header-lang-ch', {'header-lang-select': isZh == 'en'}]"
+            >EN</div>
           </div>
         </div>
       </div>
@@ -114,9 +118,13 @@
          class="header-rwd-show"
         >
           <div class="header-rwd-show-lang">
-            <div>中文</div>
+            <div @click="setLocale('zh')"
+              :class="['header-rwd-lang', {'header-rwd-lang-select': isZh == 'zh'}]"
+            >中文</div>
             <div>｜</div>
-            <div>EN</div>
+            <div @click="setLocale('en')"
+              :class="['header-rwd-lang', {'header-rwd-lang-select': isZh == 'en'}]"
+            >EN</div>
           </div>
         </div>
         </div>
@@ -182,6 +190,9 @@
 
 <script lang="ts" setup>
 
+import { useI18n } from 'vue-i18n'
+const { locale, setLocale } = useI18n()
+
 const isShowProject = ref(false)
 const isShowShop = ref(false)
 
@@ -198,6 +209,19 @@ const isShowMenuPopup = ref(false)
 const isShowlang = ref(false)
 
 console.log(indexPage.value)
+
+const isZh = ref('zh')
+isZh.value = locale.value
+console.log(locale.value)
+
+watch(
+  () => locale.value,
+  (currentLang, previousLang) => {
+    isZh.value = currentLang
+    console.log(currentLang)
+    // console.log(previousLang)
+  }
+)
 
 </script>
 
@@ -334,6 +358,7 @@ console.log(indexPage.value)
   }
 
   &-lang-ch {
+    color: #D4CFCD;
     cursor: pointer;
 
     &:hover {
@@ -341,13 +366,8 @@ console.log(indexPage.value)
     }
   }
 
-  &-lang-en {
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.7;
-    }
-    
+  &-lang-select {
+    color: #5E5B52;
   }
 
 }
@@ -409,10 +429,14 @@ console.log(indexPage.value)
 
     &-show-lang {
       display: flex;
+    }
 
-      & div:last-child {
-        color: #D4CFCD;
-      }
+    &-lang {
+      color: #D4CFCD;
+    }
+
+    &-lang-select {
+      color: #5E5B52;
     }
 
     &-popup {
