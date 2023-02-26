@@ -21,7 +21,8 @@
           <div class="list-title">畫作</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link v-for="(product, index) in shopAll.paint" :key="index"
+            <nuxt-link v-for="(product, index) in shopAll.paint"
+             :key="index"
              class="list-href"
               :to="`/shop/product?id=${product.href}`"
             >

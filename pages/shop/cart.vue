@@ -5,66 +5,45 @@
       <div class="cart-outer">
         <div class="cart-title">產品</div>
         <div class="cart-line"></div>
-        <div class="cart-box">
+
+        <div v-for="(shop, index) in shopList"
+          :key="index"
+          class="cart-box"
+        >
           <div class="cart-img"></div>
           <div class="cart-detail">
-            <div class="cart-name">產品名稱</div>
-            <div class="cart-price">NT.5000</div>
+            <div class="cart-name">{{ shop.name }}</div>
+            <div class="cart-price">NT.{{ shop.price }}</div>
             <div class="cart-row cart-desktop">
-              <div class="cart-cal">-</div>
-              <div class="cart-count"></div>
-              <div class="cart-cal">+</div>
+              <div @click="decreaseShop(index)"
+                class="cart-cal"
+              >-</div>
+              <div class="cart-count">{{ shop.quantity }}</div>
+              <div @click="addShop(index)"
+                class="cart-cal"
+              >+</div>
             </div>
-            <div class="cart-remove">移除</div>
+            <div @click="removeShop(index)"
+              class="cart-remove"
+            >移除</div>
           </div>
           <div class="cart-row cart-rwd">
-            <div class="cart-cal">-</div>
-            <div class="cart-count"></div>
-            <div class="cart-cal">+</div>
+            <div @click="decreaseShop(index)"
+              class="cart-cal"
+            >-</div>
+            <div class="cart-count">{{ shop.quantity }}</div>
+            <div @click="addShop(index)"
+             class="cart-cal"
+            >+</div>
           </div>
         </div>
-        <div class="cart-box">
-          <div class="cart-img"></div>
-          <div class="cart-detail">
-            <div class="cart-name">產品名稱</div>
-            <div class="cart-price">NT.5000</div>
-            <div class="cart-row cart-desktop">
-              <div class="cart-cal">-</div>
-              <div class="cart-count"></div>
-              <div class="cart-cal">+</div>
-            </div>
-            <div class="cart-remove">移除</div>
-          </div>
-          <div class="cart-row cart-rwd">
-            <div class="cart-cal">-</div>
-            <div class="cart-count"></div>
-            <div class="cart-cal">+</div>
-          </div>
-        </div>
-        <div class="cart-box">
-          <div class="cart-img"></div>
-          <div class="cart-detail">
-            <div class="cart-name">產品名稱</div>
-            <div class="cart-price">NT.5000</div>
-            <div class="cart-row cart-desktop">
-              <div class="cart-cal">-</div>
-              <div class="cart-count"></div>
-              <div class="cart-cal">+</div>
-            </div>
-            <div class="cart-remove">移除</div>
-          </div>
-          <div class="cart-row cart-rwd">
-            <div class="cart-cal">-</div>
-            <div class="cart-count"></div>
-            <div class="cart-cal">+</div>
-          </div>
-        </div>
+
       </div>
 
       <div class="cart-sum">
         <div class="cart-sum-box">
           <div class="cart-sum-remember">小記</div>
-          <div class="cart-sum-num">$7,100 NTD</div>
+          <div class="cart-sum-num">${{ totalPrice }} NTD</div>
         </div>
         <nuxt-link to="/shop/detail">
           <div class="cart-sum-checkout">前往結賬</div>
@@ -79,6 +58,28 @@
 import { useShopStore } from '@/stores/shop'
 
 const shopStore = useShopStore()
+
+const shopList = shopStore.shopList
+
+function decreaseShop(index: Boolean) {
+  if(shopList[index].quantity != 1) {
+    shopList[index].quantity--
+  }
+}
+
+function addShop(index: any) {
+  if(shopList[index].count > shopList[index].quantity) {
+    shopList[index].quantity++
+  }
+}
+
+function removeShop(index: any) {
+  shopList.splice(index, 1)
+}
+
+const totalPrice = computed(() => {
+  return shopList.reduce((acc: any, shop: any) => acc + shop.price * shop.quantity, 0)
+})
 
 // shopStore.addShopItem({ name: 'apple', price: 10 })
 // console.log(shopStore.shopList)
