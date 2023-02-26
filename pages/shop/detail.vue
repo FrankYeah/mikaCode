@@ -48,7 +48,7 @@
           <div class="detail-bg">
             <div class="detail-row">
               <div class="detail-write">小記</div>
-              <div class="detail-num">$7,100 NTD</div>
+              <div class="detail-num">${{ totalPrice }} NTD</div>
             </div>
             <div class="detail-row">
               <div class="detail-write">宅配運費</div>
@@ -57,25 +57,20 @@
             <div class="detail-line"></div>
             <div class="detail-row">
               <div class="detail-write">總計</div>
-              <div class="detail-num detail-total">$7150 NTD</div>
+              <div class="detail-num detail-total">${{ totalPrice + 50 }} NTD</div>
             </div>
             <div class="detail-btn">前往付款</div>
           </div>
           <div class="detail-title">購買項目</div>
-          <div class="detail-product">
+          <div v-for="(shop, index) in shopList"
+            :key="index"
+            class="detail-product"
+          >
             <div class="detail-product-img"></div>
             <div class="detail-product-box">
-              <div class="detail-product-name">產品名稱</div>
-              <div class="detail-product-num">NT.5000</div>
-              <div class="detail-product-count">數量 2</div>
-            </div>
-          </div>
-          <div class="detail-product">
-            <div class="detail-product-img"></div>
-            <div class="detail-product-box">
-              <div class="detail-product-name">產品名稱</div>
-              <div class="detail-product-num">NT.5000</div>
-              <div class="detail-product-count">數量 2</div>
+              <div class="detail-product-name">{{ shop.name }}</div>
+              <div class="detail-product-num">NT.{{ shop.price }}</div>
+              <div class="detail-product-count">數量 {{ shop.quantity }}</div>
             </div>
           </div>
         </div>
@@ -95,6 +90,12 @@ const inputShop = reactive({
 })
 
 const shopStore = useShopStore()
+
+const shopList = shopStore.shopList
+
+const totalPrice = computed(() => {
+  return shopList.reduce((acc: any, shop: any) => acc + shop.price * shop.quantity, 0)
+})
 
 // shopStore.addShopItem({ name: 'apple', price: 10 })
 // console.log(shopStore.shopList)
