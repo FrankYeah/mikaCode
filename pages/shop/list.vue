@@ -34,7 +34,7 @@
           <div class="list-title">衣服</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link v-for="(product, index) in shopAll.paint" :key="index"
+            <nuxt-link v-for="(product, index) in shopAll.clothes" :key="index"
              class="list-href"
               :to="`/shop/product?id=${product.href}`"
             >
@@ -47,7 +47,7 @@
           <div class="list-title">書籍</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link v-for="(product, index) in shopAll.paint" :key="index"
+            <nuxt-link v-for="(product, index) in shopAll.book" :key="index"
              class="list-href"
               :to="`/shop/product?id=${product.href}`"
             >

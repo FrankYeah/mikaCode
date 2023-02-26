@@ -8,19 +8,19 @@
         </nuxt-link>
       </div>
       <div class="product-detail">
-        <div class="product-name">產品名稱</div>
+        <div class="product-name">{{ shopData[0].name }}</div>
         <div class="product-line"></div>
         <div class="product-price-name">價格：</div>
-        <div class="product-price">NT 1000</div>
+        <div class="product-price">NT {{ shopData[0].price }}</div>
         <div class="product-quantity">數量</div>
         <div class="product-row">
-          <div @click="addNum--" class="product-cal">-</div>
+          <div @click="decreaseShop" class="product-cal">-</div>
           <div class="product-num">{{ addNum }}</div>
-          <div @click="addNum++" class="product-cal">+</div>
+          <div @click="addShop" class="product-cal">+</div>
         </div>
-        <div class="product-add">加入購物車</div>
+        <div @click="addToCart" class="product-add">加入購物車</div>
         <div class="product-desc">商品說明:</div>
-        <div class="product-text">產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述產品描述</div>
+        <div class="product-text">{{ shopData[0].des }}</div>
         <div class="product-desc">送貨方式：</div>
         <div class="product-text">
           7-11 取貨付款
@@ -42,10 +42,66 @@
 <script lang="ts" setup>
 
 import { useShopStore } from '@/stores/shop'
+import { useRoute } from 'vue-router'
 
 const addNum = ref(1)
 
+// 取得當前購物車的資訊
+
 const shopStore = useShopStore()
+
+const shopList = shopStore.shopList
+const shopAll = shopStore.shopAll
+
+const route = useRoute()
+
+const ShopType: string = route.query.id.substring(0, route.query.id.length - 1);
+
+const shopData = shopAll[ShopType].filter((shop: any) => shop.href === route.query.id)
+
+function decreaseShop() {
+  if(addNum.value == 0) return
+  addNum.value--
+}
+
+function addShop() {
+  if(shopData[0].count < addNum.value) return
+  addNum.value++
+}
+
+function addToCart() {
+  const index = shopList.findIndex((shop: any) => shop.name === shopData[0].name)
+  if(addNum.value == 0){
+    if(index != -1) {
+      // 有存過刪除
+      shopList.splice(index, 1)
+    }
+    // 無存過不用動
+  } else {
+    if(index != -1) {
+      // 有存過刪除
+      shopList.splice(index, 1)
+      // 塞入值
+      addShopToCart()
+    } else {
+      // 沒存過則塞入值
+      addShopToCart()
+    }
+  }
+}
+
+function addShopToCart() {
+  shopStore.addShopItem({
+    name: shopData[0].name,
+    price: shopData[0].price,
+    count: shopData[0].count,
+    des: shopData[0].des,
+    img: shopData[0].img,
+    href: shopData[0].href,
+    quantity: addNum.value
+  })
+}
+
 
 // shopStore.addShopItem({ name: 'apple', price: 10 })
 // console.log(shopStore.shopList)
