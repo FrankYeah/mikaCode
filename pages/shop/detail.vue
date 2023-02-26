@@ -86,11 +86,20 @@
 
 <script lang="ts" setup>
 
+import { useShopStore } from '@/stores/shop'
+
 const inputShop = reactive({
  mail: '',
  name: '',
  address: ''
 })
+
+const shopStore = useShopStore()
+
+// shopStore.addShopItem({ name: 'apple', price: 10 })
+// console.log(shopStore.shopList)
+// shopStore.removeShopItem(0)
+// console.log(shopStore.shopList)
 
 </script>
 

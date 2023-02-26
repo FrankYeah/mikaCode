@@ -21,16 +21,10 @@
           <div class="list-title">畫作</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link class="list-href" to="/shop/product">
-              <div class="list-img"></div>
-            </nuxt-link>
-            <nuxt-link class="list-href" to="/shop/product">
-              <div class="list-img"></div>
-            </nuxt-link>
-            <nuxt-link class="list-href" to="/shop/product">
-              <div class="list-img"></div>
-            </nuxt-link>
-            <nuxt-link class="list-href" to="/shop/product">
+            <nuxt-link v-for="(product, index) in shopAll.paint" :key="index"
+             class="list-href"
+              :to="`/shop/product?id=${product.href}`"
+            >
               <div class="list-img"></div>
             </nuxt-link>
           </div>
@@ -40,13 +34,10 @@
           <div class="list-title">衣服</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link class="list-href" to="/shop/product">
-              <div class="list-img"></div>
-            </nuxt-link>
-            <nuxt-link class="list-href" to="/shop/product">
-              <div class="list-img"></div>
-            </nuxt-link>
-            <nuxt-link class="list-href" to="/shop/product">
+            <nuxt-link v-for="(product, index) in shopAll.paint" :key="index"
+             class="list-href"
+              :to="`/shop/product?id=${product.href}`"
+            >
               <div class="list-img"></div>
             </nuxt-link>
           </div>
@@ -56,10 +47,10 @@
           <div class="list-title">書籍</div>
           <div class="list-line"></div>
           <div class="list-box">
-            <nuxt-link class="list-href" to="/shop/product">
-              <div class="list-img"></div>
-            </nuxt-link>
-            <nuxt-link class="list-href" to="/shop/product">
+            <nuxt-link v-for="(product, index) in shopAll.paint" :key="index"
+             class="list-href"
+              :to="`/shop/product?id=${product.href}`"
+            >
               <div class="list-img"></div>
             </nuxt-link>
           </div>
@@ -70,7 +61,9 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
+
+import { useShopStore } from '@/stores/shop'
 
 function showAll() {
   selectShow.all = true
@@ -106,6 +99,14 @@ const selectShow = reactive({
  clothes: false,
  book: false
 })
+
+// 三類資料：name、類型、庫存、名稱、價格、詳細資料
+// 買家：名稱、數量、價格
+
+const shopStore = useShopStore()
+
+const shopAll = shopStore.shopAll
+
 
 </script>
 
