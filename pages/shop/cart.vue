@@ -7,7 +7,7 @@
         <div class="cart-line"></div>
 
         <div v-for="(shop, index) in shopList"
-          :key="index"
+          :key="`${shop.href}${shop.key}`"
           class="cart-box"
         >
           <div class="cart-img"></div>

@@ -43,6 +43,7 @@
 
 import { useShopStore } from '@/stores/shop'
 import { useRoute } from 'vue-router'
+import { ElMessage } from 'element-plus'
 
 const addNum = ref(1)
 
@@ -99,6 +100,11 @@ function addShopToCart() {
     img: shopData[0].img,
     href: shopData[0].href,
     quantity: addNum.value
+  })
+  // element plus 教學：https://element-plus.org/zh-CN/component/message.html#%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95
+  ElMessage({
+    message: '成功加入購物車！',
+    type: 'success',
   })
 }
 

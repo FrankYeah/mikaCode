@@ -51,12 +51,12 @@
               >
                 <div class="footer-link">商店</div>
               </nuxt-link>
-              <nuxt-link to="/shop/list"
+              <nuxt-link to="/shop/list?id=paint"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">畫作</div>
               </nuxt-link>
-              <nuxt-link to="/shop/list"
+              <nuxt-link to="/shop/list?id=clothes"
                 class="footer-link-href"
               >
                 <div class="footer-link-inner">衣服</div>

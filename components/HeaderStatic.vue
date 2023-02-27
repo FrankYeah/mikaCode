@@ -47,13 +47,13 @@
                 @mouseleave="isShowShop = false"
                 class="header-item-box"
               >
-                <nuxt-link to="/shop/list">
+                <nuxt-link to="/shop/list?id=paint">
                   <div class="header-item-box-text">畫作</div>
                 </nuxt-link>
-                <nuxt-link to="/shop/list">
+                <nuxt-link to="/shop/list?id=clothes">
                   <div class="header-item-box-text">衣服</div>
                 </nuxt-link>
-                <nuxt-link to="/shop/list">
+                <nuxt-link to="/shop/list?id=book">
                   <div class="header-item-box-text">書籍</div>
                 </nuxt-link>
               </div>
@@ -78,11 +78,12 @@
 
         <div class="header-function">
           <nuxt-link to="/shop/cart"
-            :class="['header-shop-href', {'header-shop-with': shopStore.shopList.length > 0}]"
+            :class="['header-shop-href',
+            {'header-shop-with': shopStore.shopList.length > 0}]"
           >
             <img class="header-shop"
               src="@/assets/img/common/shop.png" alt="shop"
-             >
+            >
           </nuxt-link>
           <div class="header-lang">
             <div @click="setLocale('zh')"
@@ -108,10 +109,13 @@
             src="@/assets/img/common/lang.png"
             alt="lang"
           >
-          <nuxt-link to="/shop/list"
-            class="header-rwd-icon-href"
+          <nuxt-link to="/shop/cart"
+            :class="['header-rwd-icon-href',
+            {'header-shop-with': shopStore.shopList.length > 0}]"
           >
-            <img class="header-rwd-icon" src="@/assets/img/common/shop.png" alt="shop">
+            <img class="header-rwd-icon"
+              src="@/assets/img/common/shop.png" alt="shop"
+            >
           </nuxt-link>
           <img @click="isShowMenuPopup = true"
             class="header-rwd-icon-menu"
@@ -164,15 +168,15 @@
             <nuxt-link to="/shop/list">
             <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">全部</div>
             </nuxt-link>
-            <nuxt-link to="/shop/list">
+            <nuxt-link to="/shop/list?id=paint">
             <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">畫作</div>
             </nuxt-link>
           </div>
           <div class="header-rwd-popup-row">
-            <nuxt-link to="/shop/list">
+            <nuxt-link to="/shop/list?id=clothes">
             <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">衣服</div>
             </nuxt-link>
-            <nuxt-link to="/shop/list">
+            <nuxt-link to="/shop/list?id=book">
             <div @click="isShowMenuPopup = false" class="header-rwd-popup-text">書籍</div>
             </nuxt-link>
           </div>
@@ -424,6 +428,17 @@ const shopStore = useShopStore()
 
   &-desktop {
     display: none;
+  }
+
+  &-shop-with {
+    position: relative;
+    
+    &::before {
+      width: 8px;
+      height: 8px;
+      right: 18px;
+      top: 0px;
+    }
   }
 
   &-rwd {

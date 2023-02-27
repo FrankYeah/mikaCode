@@ -42,7 +42,7 @@
           <div class="paint-popup-column">
             <div class="paint-popup-head">作品名稱</div>
             <div class="paint-popup-text">作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述作品敘述</div>
-            <nuxt-link to="/shop/list">
+            <nuxt-link to="/shop/list?id=paint">
               <div class="paint-popup-btn">前往購買</div>
             </nuxt-link>
           </div>

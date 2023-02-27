@@ -65,6 +65,7 @@
 <script setup>
 
 import { useShopStore } from '@/stores/shop'
+import { useRoute } from 'vue-router'
 
 function showAll() {
   selectShow.all = true
@@ -100,6 +101,19 @@ const selectShow = reactive({
  clothes: false,
  book: false
 })
+
+// 路由判斷顯示
+
+const route = useRoute()
+const ShopType = route.query.id
+
+if(ShopType == 'paint') {
+  showPaint()
+} else if(ShopType == 'book') {
+  showBook()
+} else if(ShopType == 'clothes') {
+  showClothes()
+}
 
 // 三類資料：name、類型、庫存、名稱、價格、詳細資料
 // 買家：名稱、數量、價格
