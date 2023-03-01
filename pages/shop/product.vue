@@ -49,12 +49,12 @@ const addNum = ref(1)
 
 // 取得當前購物車的資訊
 
-const shopStore = useShopStore()
+const shopStore:any = useShopStore()
 
 const shopList = shopStore.shopList
 const shopAll = shopStore.shopAll
 
-const route = useRoute()
+const route:any = useRoute()
 
 const ShopType: string = route.query.id.substring(0, route.query.id.length - 1);
 
