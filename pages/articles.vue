@@ -100,6 +100,7 @@
 <style lang="scss" scoped>
 
 .articles {
+  min-height: calc(100vh - 270px);
   max-width: 1014px;
   margin: 0px auto 0px;
   padding: 130px 0px 42px;

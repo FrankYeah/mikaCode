@@ -18,6 +18,7 @@
 <style lang="scss" scoped>
 
 .course {
+  min-height: calc(100vh - 270px);
   padding: 130px 0px 170px;
 
   &-box {

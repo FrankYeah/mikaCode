@@ -4,7 +4,7 @@
     <div class="list-main">
       <div class="list-tag-box">
         <div @click="showAll"
-         :class="['list-tag list-tag-underline', {'list-tag-underline': selectShow.all}]">
+         :class="['list-tag', {'list-tag-underline': selectShow.all}]">
         全部</div>
         <div @click="showPaint"
          :class="['list-tag', {'list-tag-underline': selectShow.paint}]"
@@ -128,6 +128,7 @@ const shopAll = shopStore.shopAll
 <style lang="scss" scoped>
 
 .list {
+  min-height: calc(100vh - 270px);
   max-width: 1014px;
   margin: 0px auto 0px;
   padding: 130px 0px 100px;

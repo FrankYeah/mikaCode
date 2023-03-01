@@ -68,6 +68,7 @@ function showDetail(num:number) {
 <style lang="scss" scoped>
 
 .paint {
+  min-height: calc(100vh - 270px);
   max-width: 812px;
   margin: 0px auto;
   padding: 130px 0px 109px;

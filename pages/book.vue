@@ -96,6 +96,7 @@ const isShowLine = ref(false)
 <style lang="scss" scoped>
 
 .book {
+  min-height: calc(100vh - 270px);
   max-width: 1020px;
   margin: 0px auto;
   padding: 130px 0px 109px;

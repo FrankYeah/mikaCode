@@ -28,6 +28,7 @@
 <style lang="scss" scoped>
 
 .about {
+  min-height: calc(100vh - 270px);
   padding: 163px 0px 0px;
 
   &-outer {

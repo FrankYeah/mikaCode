@@ -157,6 +157,7 @@ const subscript = ref('')
   }
 
   &-logo {
+    width: 83px;
     margin-bottom: 19px;
     
     &:hover {

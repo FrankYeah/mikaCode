@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 
 const props = defineProps(['value'])
 
@@ -19,6 +19,7 @@ const props = defineProps(['value'])
 <style lang="scss" scoped>
 
 .article {
+  min-height: calc(100vh - 270px);
   max-width: 1080px;
   margin: 0px auto 0px;
   padding: 145px 0px 0px;

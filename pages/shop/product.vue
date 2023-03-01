@@ -119,6 +119,7 @@ function addShopToCart() {
 <style lang="scss" scoped>
 
 .product {
+  min-height: calc(100vh - 270px);
   max-width: 1080px;
   margin: 0px auto 0px;
   padding: 95px 26px 0px 42px;

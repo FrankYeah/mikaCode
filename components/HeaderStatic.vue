@@ -379,7 +379,7 @@ const shopStore = useShopStore()
   }
 
   &-shop {
-
+    width: 40px;
   }
 
   &-shop-with {
@@ -399,7 +399,7 @@ const shopStore = useShopStore()
 
   &-lang {
     display: flex;
-    margin-top: 13px;
+    margin-top: 0px;
   }
 
   &-lang-ch {
@@ -461,14 +461,13 @@ const shopStore = useShopStore()
     }
 
     &-icon {
-      width: 19px;
-      height: 19px;
-      margin-right: 18px;
+      width: 30px;
+      height: 30px;
     }
 
     &-icon-menu {
-      width: 16px;
-      height: 16px;
+      width: 28px;
+      height: 28px;
     }
 
     &-icon-href {

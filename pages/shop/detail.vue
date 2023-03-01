@@ -107,6 +107,7 @@ const totalPrice = computed(() => {
 <style lang="scss" scoped>
 
 .detail {
+  min-height: calc(100vh - 270px);
   max-width: 1080px;
   margin: 0px auto;
   padding: 150px 32px 40px;

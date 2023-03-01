@@ -33,7 +33,7 @@
           <div class="index-project-right">
             <div class="index-project-head">所謂的「繪畫真理」，我將在畫中告訴你</div>
             <div class="index-project-text">將探索世界的閱歷呈現在畫作中，透過謎卡的畫作看見世界的美</div>
-            <KnowMore :value="'立即瀏覽'" :link="'/paint'" />
+            <KnowMore :value="'立即瀏覽'" :link="'paint'" />
           </div>
         </div>
         <div class="index-project-box-reverse">
@@ -51,19 +51,19 @@
       <div class="index-common-head2">商品</div>
       <div class="index-common-head2-line"></div>
       <div class="index-product-outer">
-        <nuxt-link to="/contact">
+        <nuxt-link to="/shop/list?id=book">
           <div class="index-product-box">
             <img class="index-product-img1" src="@/assets/img/book/book1.png" alt="shop">
             <div class="index-product-text">書本</div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/contact">
+        <nuxt-link to="/shop/list?id=paint">
           <div class="index-product-box">
             <img class="index-product-img2" src="@/assets/img/paint/paint1.png" alt="shop">
             <div class="index-product-text">畫作</div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/contact">
+        <nuxt-link to="/shop/list?id=clothes">
           <div class="index-product-box">
             <img class="index-product-img3" src="@/assets/img/product/shirt1.png" alt="shop">
             <div class="index-product-text">衣服</div>

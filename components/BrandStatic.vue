@@ -22,18 +22,18 @@
             </a>
           </div>
           <div class="brand-brand-box">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
-            <img class="brand-brand" src="@/assets/img/brand/brand1.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/01.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/02.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/03.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/04.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/05.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/06.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/07.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/08.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/09.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/10.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/11.png" alt="logo">
+            <img class="brand-brand" src="@/assets/img/brand/12.png" alt="logo">
           </div>
         </div>
       <!-- </div> -->

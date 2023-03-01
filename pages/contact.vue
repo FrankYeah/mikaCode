@@ -51,6 +51,7 @@ function sendForm() {
 <style lang="scss" scoped>
 
 .about {
+  min-height: calc(100vh - 270px);
   padding: 130px 0px 40px;
 
   &-outer {
