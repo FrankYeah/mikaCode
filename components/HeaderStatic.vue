@@ -364,7 +364,7 @@ const shopStore = useShopStore()
   &-function {
     position: absolute;
     right: 80px;
-    top: 27px;
+    top: 18px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -388,8 +388,8 @@ const shopStore = useShopStore()
     &::before {
       content: '';
       position: absolute;
-      right: 0px;
-      top: 0px;
+      right: 7px;
+      top: 9px;
       width: 10px;
       height: 10px;
       background-color: #FF0000;
@@ -434,10 +434,10 @@ const shopStore = useShopStore()
     position: relative;
     
     &::before {
-      width: 8px;
-      height: 8px;
-      right: 18px;
-      top: 0px;
+      width: 7px;
+      height: 7px;
+      right: 5px;
+      top: 7px;
     }
   }
 

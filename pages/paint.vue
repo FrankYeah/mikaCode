@@ -242,7 +242,7 @@ function showDetail(num:number) {
     
 
     &-outer {
-      margin-top: 110px;
+      margin-top: 4vh;
       padding: 0px 32px;
     }
 
@@ -259,7 +259,7 @@ function showDetail(num:number) {
     &-img {
       max-width: 285px;
       width: 100%;
-      height: 245px;
+      height: 220px;
       margin-right: 0px;
     }
 
