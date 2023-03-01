@@ -89,7 +89,7 @@ const inputShop = reactive({
  address: ''
 })
 
-const shopStore = useShopStore()
+const shopStore:any = useShopStore()
 
 const shopList = shopStore.shopList
 

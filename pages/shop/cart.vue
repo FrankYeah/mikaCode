@@ -57,23 +57,23 @@
 
 import { useShopStore } from '@/stores/shop'
 
-const shopStore = useShopStore()
+const shopStore:any = useShopStore()
 
-const shopList = shopStore.shopList
+const shopList:Array<any> = shopStore.shopList
 
-function decreaseShop(index: Number) {
+function decreaseShop(index: any) {
   if(shopList[index].quantity != 1) {
     shopList[index].quantity--
   }
 }
 
-function addShop(index: Number) {
+function addShop(index: any) {
   if(shopList[index].count > shopList[index].quantity) {
     shopList[index].quantity++
   }
 }
 
-function removeShop(index: Number) {
+function removeShop(index: any) {
   shopList.splice(index, 1)
 }
 
