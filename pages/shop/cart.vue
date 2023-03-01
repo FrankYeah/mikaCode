@@ -61,19 +61,19 @@ const shopStore = useShopStore()
 
 const shopList = shopStore.shopList
 
-function decreaseShop(index: Boolean) {
+function decreaseShop(index: Number) {
   if(shopList[index].quantity != 1) {
     shopList[index].quantity--
   }
 }
 
-function addShop(index: any) {
+function addShop(index: Number) {
   if(shopList[index].count > shopList[index].quantity) {
     shopList[index].quantity++
   }
 }
 
-function removeShop(index: any) {
+function removeShop(index: Number) {
   shopList.splice(index, 1)
 }
 

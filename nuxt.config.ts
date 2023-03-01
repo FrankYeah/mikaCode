@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     typescript: {
         typeCheck: true
     },
+    app: {
+      baseURL: '/mika/'
+    },
     // css: [
     //   'element-plus/dist/index.css'
     // ],
