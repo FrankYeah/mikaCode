@@ -87,7 +87,7 @@ body {
   line-height: 1;
   margin: 0px;
   padding: 0px;
-  font-family: 'Noto Sans TC', 'Noto Sans SC', 'Lato' ,sans-serif;
+  font-family:  'Noto','Noto Sans TC', 'Noto Sans SC', 'Lato' ,sans-serif;
   background-color: #f0f0f0;
   // font-family: 'GoudyOldStyle,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang TC,Hiragino Sans GB,Microsoft JhengHei,sans-serif!important';
 }

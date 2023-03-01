@@ -7,11 +7,12 @@ export default defineNuxtConfig({
     app: {
       baseURL: '/mika/'
     },
-    // css: [
-    //   'element-plus/dist/index.css'
-    // ],
+    css: [
+      '@/assets/fonts/NotoSerifTC/NotoSerifTC.css',
+    ],
     vite: {
       css: {
+        
         preprocessorOptions: {
           scss: {
             additionalData: ''
