@@ -7,7 +7,7 @@
     </div>
 
     <div class="articles-media">
-      <a href="https://www.instagram.com/sidd.blue/" target="_blank">
+      <a href="https://www.instagram.com/mika_ontheroad/" target="_blank">
         <div class="articles-media-box">
           <div class="articles-media-img"></div>
           <div class="articles-media-row">
@@ -17,7 +17,7 @@
           <div class="articles-media-text">帶著正確的裝備與知識，快樂上山平安回家 feat. Salomon</div>
         </div>
       </a>
-      <a href="https://www.instagram.com/sidd.blue/" target="_blank">
+      <a href="https://www.instagram.com/mika_ontheroad/" target="_blank">
         <div class="articles-media-box">
           <div class="articles-media-img"></div>
           <div class="articles-media-row">

@@ -5,6 +5,7 @@
       <div class="index-bg-box">
         <div class="index-bg-head">謎卡 Mika</div>
         <div class="index-bg-text">{{ $t('hello') }}</div>
+        <div class="index-bg-bg"></div>
       </div>
     </div>
 
@@ -175,6 +176,7 @@ const isVisible = ref(false);
   &-bg {
     width: 100vw;
     height: 100vh;
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -187,14 +189,27 @@ const isVisible = ref(false);
     }
 
     &-head {
+      position: relative;
       font-size: 20px;
       color: white;
+      z-index: 2;
     }
 
     &-text {
+      position: relative;
       margin-top: 8px;
       font-size: 12px;
       color: white;
+      z-index: 2;
+    }
+
+    &-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.2);
     }
 
   }
@@ -431,6 +446,10 @@ const isVisible = ref(false);
     }
 
     &-text {
+      
+    }
+
+    &-bg {
       
     }
 
