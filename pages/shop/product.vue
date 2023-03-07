@@ -8,10 +8,10 @@
         </nuxt-link>
       </div>
       <div class="product-detail">
-        <div class="product-name">{{ shopData[0].name }}</div>
+        <div class="product-name">{{ shopData[0]?shopData[0].name:"" }}</div>
         <div class="product-line"></div>
         <div class="product-price-name">價格：</div>
-        <div class="product-price">NT {{ shopData[0].price }}</div>
+        <div class="product-price">NT {{ shopData[0]?shopData[0].price:"" }}</div>
         <div class="product-quantity">數量</div>
         <div class="product-row">
           <div @click="decreaseShop" class="product-cal">-</div>
@@ -20,7 +20,7 @@
         </div>
         <div @click="addToCart" class="product-add">加入購物車</div>
         <div class="product-desc">商品說明:</div>
-        <div class="product-text">{{ shopData[0].des }}</div>
+        <div class="product-text">{{ shopData[0]?shopData[0].des:"" }}</div>
         <div class="product-desc">送貨方式：</div>
         <div class="product-text">
           7-11 取貨付款
@@ -56,9 +56,14 @@ const shopAll = shopStore.shopAll
 
 const route:any = useRoute()
 
-const ShopType: string = route.query.id.substring(0, route.query.id.length - 1);
+// const ShopType: string = route.query.id.substring(0, route.query.id.length - 1);
 
-const shopData = shopAll[ShopType].filter((shop: any) => shop.href === route.query.id)
+const ShopType: string = route.query && route.query.id ? route.query.id.substring(0, route.query.id.length - 1) : "";
+
+
+// const shopData = shopAll[ShopType].filter((shop: any) => shop.href === route.query.id)
+const shopData = shopAll[ShopType] ? shopAll[ShopType].filter((shop: any) => shop.href === route.query.id) : [];
+
 
 function decreaseShop() {
   if(addNum.value == 0) return
